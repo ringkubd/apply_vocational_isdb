@@ -14,13 +14,13 @@ export default function Layout({ children, title }){
                 <meta property="og:url" content="https://isdb-bisew.org/apply" />
                 <meta property="og:title" content="Apply for Vocational Training Programme" />
                 <meta property="og:description" content="IsDB-BISEW was established following an agreement between the Islamic Development Bank, Jeddah, Saudi Arabia, and the Government of Bangladesh." />
-                <meta property="og:image" content="photos/shares/Meta-Picture/isdb-bisew-11-2021.png" />
+                <meta property="og:image" content="https://isdb-bisew.org/photos/shares/Meta-Picture/isdb-bisew-11-2021.png" />
 
                 <meta property="twitter:card" content="isdbbisew" />
                 <meta property="twitter:url" content="https://isdb-bisew.org/apply" />
                 <meta property="twitter:title" content="Apply for Vocational Training Programme" />
                 <meta property="twitter:description" content="IsDB-BISEW was established following an agreement between the Islamic Development Bank, Jeddah, Saudi Arabia, and the Government of Bangladesh." />
-                <meta property="twitter:image" content="photos/shares/Meta-Picture/isdb-bisew-11-2021.png" />
+                <meta property="twitter:image" content="https://isdb-bisew.org/photos/shares/Meta-Picture/isdb-bisew-11-2021.png" />
                 <link rel="shortcut icon" href="https://isdb-bisew.org/img/logo.png" type="image/x-icon"/>
             </Head>
             <Navbar />

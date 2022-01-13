@@ -13,10 +13,6 @@ export default function handler(req, res){
             {
                 name: "Course Outcome",
                 path: "/course_outcome",
-            },
-            {
-                name: "About Us",
-                path: "/about_us",
             }
         ]
     )
