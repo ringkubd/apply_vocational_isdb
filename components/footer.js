@@ -5,7 +5,7 @@ import {VscIssues} from "react-icons/vsc";
 import useSWR from "swr";
 import {FiFacebook} from "react-icons/fi";
 
-function Footer(props){
+function Footer(){
     const {data, error} = useSWR('/api/footer_links', url => fetch(url).then(r => r.json()))
     if (error) return <div className="flex items-center justify-items-center">{error.message}</div>
     if (!data) return <div className="flex items-center justify-items-center">Loading....</div>
@@ -90,7 +90,7 @@ function Footer(props){
                         <ul className="list-none pl-0 pt-0 mt-0.5 font-light">
                             <li>
                                 <Link href={data[3].social.facebook} passHref>
-                                    <FiFacebook className="text-4xl bg-blue-900"/>
+                                    <FiFacebook className="text-4xl bg-blue-900" />
                                 </Link>
                             </li>
                         </ul>

@@ -2,8 +2,13 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "../components/header";
 import {BiAlarm} from "react-icons/bi";
+import {useEffect, useRef} from "react";
 
 function Home(){
+    useEffect(() => {
+
+    }, []);
+
     return (
         <div>
             <Head>
