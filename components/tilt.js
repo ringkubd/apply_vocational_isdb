@@ -8,6 +8,6 @@ function Tilt(props) {
         VanillaTilt.init(tilt.current, options);
     }, [options]);
 
-    return <div ref={tilt} {...rest} />;
+    return <div className="transform-cpu" ref={tilt} {...rest} />;
 }
 export default Tilt;
