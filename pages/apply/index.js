@@ -22,8 +22,8 @@ export default function Apply() {
 
             <div className="bg-gray-100 mx-auto max-w-6xl bg-white md:py-20 py-10 px-10 md:px-24 shadow-xl mb-24">
                 <form>
-                    <fieldset className="border-2 p-4 mb-4 shadow hover:shadow-2xl rounded group shadow-cyan-500/50">
-                        <legend className="font-bold text-[#05A0C8] border-2 p-2 rounded-lg group-hover:animate-bounce">Personal Information:</legend>
+                    <fieldset className="border-2 p-4 mb-4 shadow hover:shadow-2xl rounded group shadow-cyan-500/50 hover:shadow-[#05a0c8] hover:backdrop-blur-2xl">
+                        <legend className="font-bold text-[#05A0C8] border-2 p-2 rounded-lg group-hover:animate-bounce bg-transparent group-hover:backdrop-blur-2xl bg-cyan-50">Personal Information:</legend>
                         <div className="-mx-3 md:flex mb-6">
                             <div className="md:w-1/2 px-3 mb-6 md:mb-0">
                                 <label htmlFor="name" className="uppercase tracking-wide text-black text-xs font-bold mb-2">Candidate Name<sup className="text-sm text-red-500">*</sup></label>
@@ -77,7 +77,7 @@ export default function Apply() {
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset className="border-2 p-4 mb-4 shadow hover:shadow-2xl rounded group">
+                    <fieldset className="border-2 p-4 mb-4 shadow hover:shadow-2xl rounded group  shadow-cyan-500/50 hover:shadow-cyan-500">
                         <legend className="font-bold text-[#05A0C8] border-2 p-2 rounded-lg  group-hover:animate-bounce">Educational Information:</legend>
                         <div className="-mx-3 md:flex mb-6">
                             <div className="md:w-1/2 px-3 mb-6 md:mb-0">
@@ -110,7 +110,7 @@ export default function Apply() {
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset className="border-2 p-4 shadow hover:shadow-2xl mb-4 rounded group">
+                    <fieldset className="border-2 p-4 shadow hover:shadow-2xl mb-4 rounded group  shadow-cyan-500/50 hover:shadow-cyan-500">
                         <legend className="font-bold text-[#05A0C8] border-2 p-2 rounded-lg  group-hover:animate-bounce">Contact Information:</legend>
                         <div className="-mx-3 md:flex mb-6">
                             <div className="md:w-1/2 px-3 mb-6 md:mb-0">
@@ -125,7 +125,7 @@ export default function Apply() {
                     </fieldset>
                     <div className="-mx-3 md:flex mb-6">
                         <div className="md:w-1/2 md:mt-6 px-3 mb-6 md:mb-0">
-                            <input type="submit" value="Apply" className="w-full bg-green-600 text-black border border-gray-200 rounded py-3 px-4 mb-3"/>
+                            <input type="submit" value="Apply" className="w-full bg-green-600 text-black border border-gray-200 rounded py-3 px-4 mb-3 shadow hover:shadow-2xl shadow-green-500/50 hover:shadow-green-500"/>
                         </div>
                     </div>
                 </form>
