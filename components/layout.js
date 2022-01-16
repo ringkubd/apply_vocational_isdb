@@ -49,7 +49,7 @@ export default function Layout({ children, title }){
                     "autoPlay": true,
                     "background": {
                         "color": {
-                            "value": "#0d47a1"
+                            "value": "#ffffff"
                         },
                         "image": "",
                         "position": "50% 50%",
