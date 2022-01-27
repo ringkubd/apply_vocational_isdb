@@ -4,6 +4,7 @@ import Link from 'next/link'
 import {VscIssues} from "react-icons/vsc";
 import useSWR from "swr";
 import {FiFacebook} from "react-icons/fi";
+import React from "react";
 
 function Footer(){
     const {data, error} = useSWR('/api/footer_links', url => fetch(url).then(r => r.json()))
@@ -90,7 +91,7 @@ function Footer(){
                         <ul className="list-none pl-0 pt-0 mt-0.5 font-light">
                             <li>
                                 <Link href={data[3].social.facebook} passHref>
-                                    <FiFacebook className="text-4xl bg-blue-900" />
+                                    Fb
                                 </Link>
                             </li>
                         </ul>

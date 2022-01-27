@@ -45,7 +45,6 @@ export default function Layout({ children, title }){
             <Particles
                 className="bg-cyan-900 z-0 opacity-10 fixed overflow-visible"
                 options={{
-
                     "autoPlay": true,
                     "background": {
                         "color": {
