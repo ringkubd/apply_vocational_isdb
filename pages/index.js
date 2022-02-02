@@ -1,19 +1,12 @@
 import Head from "next/head";
-import Link from "next/link";
 import Header from "../components/header";
 import {BiAlarm} from "react-icons/bi";
 import {useEffect, useRef} from "react";
 import {BanglaDate, EnglishNumberToBangla} from "../lib/banglaDate";
-import { Chart as ChartJS, ArcElement, CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
-    DataLabels
-} from 'chart.js';
+import {ArcElement, BarElement, CategoryScale, Chart as ChartJS, Legend, LinearScale, Title, Tooltip} from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
-import { Pie, Bar } from 'react-chartjs-2';
+import {Bar, Pie} from 'react-chartjs-2';
+
 ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, Title, ChartDataLabels);
 
 function Home({intake_schedule, report}){
@@ -93,7 +86,7 @@ function Home({intake_schedule, report}){
                 <div className="w-full py-2 shadow-xl min-h-max text-center rounded-lg bg-[#05A0C8] sticky" ref={scrollTo} onScroll={handleScroll}>
                     <h1 className="text-4xl">Round - {EnglishNumberToBangla(intake_schedule.round)}</h1>
                     <h2 className="flex items-center justify-center">
-                       <BiAlarm className="animate-ping text-red-600 text-xl" /> আবেদনের শেষ তারিখ : <span className="text-red-700 font-bold">{ BanglaDate(intake_schedule.end_date)}</span>
+                        <BiAlarm className="animate-ping text-red-600 text-xl" /> আবেদনের শেষ তারিখ : <span className="text-red-700 font-bold">{ BanglaDate(intake_schedule.end_date)}</span>
                     </h2>
                 </div>
                 <div className="w-full shadow-lg p-2 my-2 overflow-auto rounded-lg">
@@ -128,7 +121,7 @@ function Home({intake_schedule, report}){
                     </div>
                 </div>
                 <div className="w-full shadow-xl p-2 my-2 overflow-auto rounded-lg">
-                   <h1 className="w-full border-b-2 p-3 border-gray-300 font-bold">সাধারণ নির্দেশাবলী</h1>
+                    <h1 className="w-full border-b-2 p-3 border-gray-300 font-bold">সাধারণ নির্দেশাবলী</h1>
                     <ul>
                         <li>শুধুমাত্র সুবিধাবঞ্চিত মুসলিম প্রার্থীদের জন্য প্রযোজ্য</li>
                         <li>একজন প্রার্থী একবার আবেদন করতে পারবে</li>
@@ -162,9 +155,8 @@ function Home({intake_schedule, report}){
     )
 }
 
-export default Home;
 
-export async function getServerSideProps ({ req }) {
+Home.getInitialProps = async ({ req }) => {
     const api_base_url = process.env.API_BASE
     const res = await fetch(`${api_base_url}intakeschedule`)
     const json = await res.json()
@@ -173,10 +165,8 @@ export async function getServerSideProps ({ req }) {
     const reportJson = await report.json()
 
     return {
-        props : {
-            intake_schedule: json,
-            report: reportJson,
-        }
-
+        intake_schedule: json,
+        report: reportJson
     }
 }
+export default Home;
