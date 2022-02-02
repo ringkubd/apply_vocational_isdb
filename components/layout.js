@@ -32,7 +32,7 @@ export default function Layout({ children, title }){
             <Navbar />
             <main className="mx-auto" data-aos="fade-up" data-aos-duration={800} data-aos-delay={400}>{ children }</main>
             {
-                router.pathname !== "/apply" ||  !router.pathname.includes('admit_card') ? (
+                router.pathname !== "/apply" ? (
                     <div data-aos="fade-down" data-aos-duration={1000} data-aos-delay={700} className="flex justify-center items-center shadow mt-10 sticky bottom-3">
                         <Link href="/apply" passHref>
                             <button className="w-full md:w-1/2 py-2 mb-10 px-10 bg-[#05A0C8] rounded-2xl text-white">Apply {router.pathname.includes('admit_card')}</button>
