@@ -20,7 +20,8 @@ function Home({intake_schedule, report}){
     const scrollToTop = useRef("");
 
     useEffect(() => {
-    }, []);
+
+    });
 
     const data = {
         labels: ['Number of Application', 'Number of Assigned', 'Number of Complete Graduate', 'Number of Placed', 'Running Student'],
@@ -174,7 +175,7 @@ export async function getServerSideProps ({ req }) {
     return {
         props : {
             intake_schedule: json,
-            report: reportJson
+            report: reportJson,
         }
 
     }

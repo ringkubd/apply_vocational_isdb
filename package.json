@@ -22,6 +22,7 @@
     "react-icons": "^4.3.1",
     "react-to-print": "^2.14.4",
     "react-tsparticles": "^1.39.0",
+    "sharp": "^0.30.0",
     "swr": "^1.1.2",
     "vanilla-tilt": "^1.7.2",
     "yup": "^0.32.11"
